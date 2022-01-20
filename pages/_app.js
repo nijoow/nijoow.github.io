@@ -1,7 +1,18 @@
-import '../styles/globals.css'
+import Layout from "../components/Layout";
+import Head from "next/head";
+import "../styles/globals.css";
+import "../styles/Home.module.css";
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+export default function App({ Component, pageProps }) {
+  return (
+    <>
+      <Head>
+        <link rel="shortcut icon" href="/favicon.ico" />
+      </Head>
+
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </>
+  );
 }
-
-export default MyApp
