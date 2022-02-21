@@ -1,34 +1,62 @@
+$purple-main: #2f274c;
+$purple-sub: #a69dc9;
 .nav {
   width: 100%;
   position: fixed;
-  background-color: rgb(174, 137, 196);
+  background-color: $purple-main;
   z-index: 100;
+  color: $purple-sub;
+
   .navBar {
     display: flex;
     justify-content: space-between;
     position: relative;
-    max-width: 1060px;
+    max-width: 1080px;
     height: 50px;
     margin: 0 auto;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
       rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
     .logo {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      span {
+        margin-left: 10px;
+      }
+    }
+    .logoImg {
       transition: 200ms ease;
     }
-    a:hover .logo {
-      transform: rotate(5deg) scale(1.1);
+    a:hover .logoImg {
+      transform: rotate(5deg) scale(1.2);
     }
+
     a {
-      display: flex;
-      height: 100%;
-      position: relative;
-      vertical-align: middle;
-      font-weight: 600;
+      font-weight: 800;
       font-size: 18px;
       padding: 0;
       span {
-        padding: 13px 5px;
+        background: linear-gradient(45deg, #a69dc9, #c168d2);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
       }
+    }
+    .angledGradient {
+      background: #a69dc9;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: all 0.5s;
+    }
+    .angledGradient:hover {
+      background: #c168d2;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: all 0.5s;
+    }
+    .active {
+      background: #c168d2;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
     ul {
       list-style: none;
@@ -38,23 +66,30 @@
     }
     li {
       position: relative;
-      display: inline-block;
+      display: flex;
       height: 100%;
+      align-items: center;
       vertical-align: middle;
-
-      a {
-        padding: 13px 20px;
-      }
+      padding: 0 20px;
+    }
+    .darkModeBtn {
+      display: flex;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+      padding: 0;
+      background-color: #a69dc9;
+    }
+    .darkModeIcon {
+      margin: auto;
+      color: #2f274c;
+      width: 70%;
+      height: 70%;
+      transition: all 0.2s;
+    }
+    .darkModeBtn:hover .darkModeIcon {
+      transform: rotate(20deg);
+      transition: all 0.2s;
     }
   }
-}
-
-.active {
-  color: rgb(70, 0, 128);
-}
-.angledGradient:hover {
-  background: linear-gradient(70deg, blue, rgb(70, 0, 128));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: all 0.5s;
 }
