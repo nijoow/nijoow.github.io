@@ -1,0 +1,56 @@
+$purple-main: #2f274c;
+$purple-sub: #a69dc9;
+.canvas {
+  min-height: 400px;
+}
+.introbox {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  min-height: 80px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  margin-top: 30px;
+  font-size: 2rem;
+  font-weight: bold;
+  // font-family: "Cafe24Ssurround", sans-serif;
+  .intro {
+    margin: 0 auto;
+  }
+
+  span {
+    color: $purple-main;
+    font-size: 2.5rem;
+  }
+}
+.subTitle {
+  font-size: 2rem;
+  color: $purple-sub;
+  width: 100%;
+}
+.underLine {
+  position: relative;
+}
+.underLine::after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  position: absolute;
+
+  bottom: -2px;
+  left: 0;
+  background-color: #a69dc9;
+}
+.contents {
+  display: flex;
+  width: 100%;
+  // text-align: justify;
+  text-align: center;
+  .inforTitle {
+    display: flex;
+
+    align-items: center;
+    width: 10%;
+  }
+}
