@@ -21,7 +21,7 @@ export default function NavBar() {
                   stroke={"#a69dc9"}
                 />
               </div>
-              <span>'S PORTPOLIO</span>
+              <span>&apos;S PORTPOLIO</span>
             </div>
           </a>
         </Link>

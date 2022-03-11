@@ -9,9 +9,9 @@ $purple-sub: #a69dc9;
   text-align: center;
   min-height: 80px;
   width: 100%;
-  background: rgba(255, 255, 255, 0.3);
+  color: #ddd;
+  background: rgba(0, 0, 0, 0.3);
   border-radius: 10px;
-  margin-top: 30px;
   font-size: 2rem;
   font-weight: bold;
   // font-family: "Cafe24Ssurround", sans-serif;
@@ -20,14 +20,50 @@ $purple-sub: #a69dc9;
   }
 
   span {
-    color: $purple-main;
+    color: #fff;
     font-size: 2.5rem;
   }
 }
-.subTitle {
-  font-size: 2rem;
-  color: $purple-sub;
+.title {
+  // font-weight: bold;
+  position: relative;
+  font-size: 3rem;
   width: 100%;
+  text-align: left;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.title::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  bottom: -3px;
+  border-radius: 1px;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.infomation {
+  display: flex;
+  vertical-align: middle;
+  align-items: center;
+  font-size: 1.8rem;
+  color: #fff;
+  width: 100%;
+  margin: 0 0 5px 0;
+  .subTitle {
+    display: flex;
+    vertical-align: middle;
+    flex: 2;
+
+    .icon {
+      margin-right: 5px;
+    }
+  }
+  .contents {
+    font-size: 2.5rem;
+    flex: 8;
+  }
 }
 .underLine {
   position: relative;
@@ -35,22 +71,17 @@ $purple-sub: #a69dc9;
 .underLine::after {
   content: "";
   width: 100%;
-  height: 3px;
+  height: 2px;
   position: absolute;
-
-  bottom: -2px;
+  bottom: -3px;
+  border-radius: 1px;
   left: 0;
-  background-color: #a69dc9;
+  background-color: rgba(255, 255, 255, 0.5);
 }
-.contents {
-  display: flex;
-  width: 100%;
-  // text-align: justify;
-  text-align: center;
-  .inforTitle {
-    display: flex;
-
-    align-items: center;
-    width: 10%;
-  }
-}
+// .contents {
+//   display: flex;
+//   width: 100%;
+//   font-size: 3rem;
+//   text-align: left;
+//   color: #eee;
+// }

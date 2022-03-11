@@ -50,10 +50,10 @@ section {
   flex-direction: column;
   width: 100%;
   align-items: center;
-  max-width: 1080px;
-  margin: 0 auto;
+  max-width: 800px;
+  margin: 0 auto 20px auto;
 }
-container {
+.container {
   font-size: 1.6rem;
 }
 /*# sourceMappingURL=globals.css.map */
