@@ -7,12 +7,12 @@ const Footer = () => {
       <style jsx>{`
         .footer {
           width: 100%;
-          padding: 20px;
+          padding: 40px 0 20px 0;
         }
         .footer div {
           text-align: center;
           margin: auto;
-          color: #a69dc9;
+          color: #ddd;
         }
       `}</style>
     </footer>
