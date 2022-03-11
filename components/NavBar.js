@@ -14,12 +14,7 @@ export default function NavBar() {
           <a>
             <div className={styles.logo}>
               <div className={styles.logoImg}>
-                <Logo
-                  width={80}
-                  height={50}
-                  fill={"#a69dc9"}
-                  stroke={"#a69dc9"}
-                />
+                <Logo width={80} height={50} fill={"#ddd"} stroke={"#ddd"} />
               </div>
               <span>&apos;S PORTPOLIO</span>
             </div>
@@ -27,11 +22,11 @@ export default function NavBar() {
         </Link>
         <ul>
           <li>
-            <Link href="/about">
+            <Link href="/">
               <a>
                 <span
                   className={`
-                  ${router.pathname === "/about" ? styles.active : ""}
+                  ${router.pathname === "/" ? styles.active : ""}
                   ${styles.angledGradient}`}
                 >
                   About
@@ -65,7 +60,7 @@ export default function NavBar() {
               </a>
             </Link>
           </li>
-          <li>
+          <div className={styles.darkModeBtnContainer}>
             {isDark ? (
               <button className={styles.darkModeBtn}>
                 <MdWbSunny className={styles.darkModeIcon} />
@@ -75,7 +70,7 @@ export default function NavBar() {
                 <MdDarkMode className={styles.darkModeIcon} />
               </button>
             )}
-          </li>
+          </div>
         </ul>
       </div>
     </nav>
