@@ -50,10 +50,16 @@ section {
   flex-direction: column;
   width: 100%;
   align-items: center;
-  max-width: 800px;
+  max-width: 768px;
   margin: 0 auto 20px auto;
+  color: #ddd;
 }
 .container {
   font-size: 1.6rem;
+}
+.canvas {
+  max-width: 800px;
+  margin: 0 auto 0 auto;
+  min-height: 400px;
 }
 /*# sourceMappingURL=globals.css.map */

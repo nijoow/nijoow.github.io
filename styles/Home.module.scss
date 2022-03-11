@@ -1,16 +1,13 @@
-$purple-main: #2f274c;
-$purple-sub: #a69dc9;
-.canvas {
-  min-height: 400px;
-}
+// $purple-main: #2f274c;
+// $purple-sub: #4b4173;
+
 .introbox {
   display: flex;
   align-items: center;
   text-align: center;
   min-height: 80px;
   width: 100%;
-  color: #ddd;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   font-size: 2rem;
   font-weight: bold;
@@ -20,8 +17,16 @@ $purple-sub: #a69dc9;
   }
 
   span {
-    color: #fff;
+    color: #a69dc9;
     font-size: 2.5rem;
+  }
+}
+.introContents {
+  margin: 0;
+
+  li {
+    margin-bottom: 10px;
+    word-break: keep-all;
   }
 }
 .title {
@@ -30,8 +35,7 @@ $purple-sub: #a69dc9;
   font-size: 3rem;
   width: 100%;
   text-align: left;
-  color: #fff;
-  margin-bottom: 20px;
+  margin: 20px 0;
 }
 .title::after {
   content: "";
@@ -41,26 +45,27 @@ $purple-sub: #a69dc9;
   bottom: -3px;
   border-radius: 1px;
   left: 0;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.6);
 }
 .infomation {
   display: flex;
   vertical-align: middle;
   align-items: center;
   font-size: 1.8rem;
-  color: #fff;
+  color: #eee;
   width: 100%;
   margin: 0 0 5px 0;
   .subTitle {
     display: flex;
     vertical-align: middle;
     flex: 2;
+    text-align: right;
 
     .icon {
       margin-right: 5px;
     }
   }
-  .contents {
+  .infoContents {
     font-size: 2.5rem;
     flex: 8;
   }
@@ -77,6 +82,8 @@ $purple-sub: #a69dc9;
   border-radius: 1px;
   left: 0;
   background-color: rgba(255, 255, 255, 0.5);
+}
+.interest {
 }
 // .contents {
 //   display: flex;
