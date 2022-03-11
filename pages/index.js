@@ -1,10 +1,6 @@
 import Seo from "../components/Seo";
 import styles from "../styles/Home.module.css";
-import { Canvas, useFrame } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
-import Lights from "../components/Lights";
-import Nijoow from "../components/Nijoow";
-import { useState } from "react";
+import Infomation from "../components/Information";
 import {
   BsPersonCircle,
   BsFillCalendarEventFill,
@@ -12,24 +8,14 @@ import {
   BsFillEnvelopeFill,
   BsFillPencilFill,
 } from "react-icons/Bs";
+import { GiBasketballBall, GiMusicalNotes } from "react-icons/Gi";
+// import { useState } from "react";
 
 export default function Home() {
-  const [isClicked, setIsClicked] = useState(false);
-
+  // const [isClicked, setIsClicked] = useState(false);
   return (
     <div>
       <Seo title="Home" />
-      <section>
-        <Canvas
-          colorManagement
-          camera={{ position: [0, 0, 1], fov: 70 }}
-          className={styles.canvas}
-        >
-          <OrbitControls />
-          <Lights />
-          <Nijoow />
-        </Canvas>
-      </section>
       <section>
         <div className={styles.introbox}>
           <div className={styles.intro}>
