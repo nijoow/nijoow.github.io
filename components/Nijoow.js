@@ -8,7 +8,7 @@ import { useFrame } from "@react-three/fiber";
 export default function Nijoow() {
   const group = useRef();
   const [isClicked, setIsClicked] = useState(false);
-  const { nodes, materials } = useGLTF("/3D/nijoow.glb");
+  const { nodes, materials } = useGLTF("/3D/nijoowDark.glb");
   useFrame(() => {
     // console.log(isClicked);
     !isClicked && (group.current.rotation.y += 0.005);
