@@ -10,7 +10,7 @@ import {
   BsFillPencilFill,
   BsLink45Deg,
 } from "react-icons/Bs";
-import { GiBasketballBall, GiMusicalNotes } from "react-icons/Gi";
+//import { GiBasketballBall, GiMusicalNotes } from "react-icons/Gi";
 import { UserContext } from "../context/context";
 export default function Home() {
   const [song, setSong] = useState({});
