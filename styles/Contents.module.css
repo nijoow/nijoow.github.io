@@ -1,0 +1,358 @@
+.introbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  min-height: 80px;
+  width: 100%;
+  background: var(--theme-box-background);
+  border-radius: 10px;
+  font-weight: bold;
+  -webkit-box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
+          box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
+  margin: 20px 0 0 0;
+}
+
+.introbox .intro {
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
+.introbox span {
+  font-weight: bold;
+  color: var(--theme-highlight-color);
+  font-size: 2.5rem;
+}
+
+.introContents {
+  margin: 0;
+}
+
+.introContents li {
+  margin-bottom: 10px;
+  word-break: keep-all;
+}
+
+.title {
+  font-weight: bold;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  vertical-align: middle;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2.5rem;
+  width: 100%;
+  min-height: 35px;
+  text-align: left;
+  margin: 20px 0;
+}
+
+.title .workTitle {
+  font-size: 1.8rem;
+}
+
+.title::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  bottom: -3px;
+  border-radius: 1px;
+  left: 0;
+  background-color: var(--theme-underline);
+}
+
+.infomation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  vertical-align: middle;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  min-height: 30px;
+  margin: 0 0 5px 0;
+}
+
+.infomation .subTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  vertical-align: middle;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  text-align: right;
+}
+
+.infomation .subTitle .icon {
+  margin-right: 5px;
+}
+
+.infomation .infoContents {
+  height: 100%;
+  font-size: 2rem;
+  -webkit-box-flex: 8;
+      -ms-flex: 8;
+          flex: 8;
+}
+
+.underLine {
+  position: relative;
+}
+
+.underLine::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  bottom: -3px;
+  border-radius: 1px;
+  left: 0;
+  background-color: var(--theme-underline);
+}
+
+.song {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #000;
+  width: 500px;
+  height: 150px;
+  border-radius: 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 2px 2px 5px rgba(25, 25, 25, 0.9);
+          box-shadow: 2px 2px 5px rgba(25, 25, 25, 0.9);
+}
+
+.song .songAlbumImage {
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 10px;
+  width: 130px;
+  height: 130px;
+}
+
+.song .songInfo {
+  margin-right: 10px;
+  width: 340px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.song .songInfo .songTitle {
+  width: 100%;
+  font-size: 2.2rem;
+  color: #fff;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.song .songInfo .songArtist {
+  width: 100%;
+  font-size: 1.6rem;
+  color: #bbb;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.imageContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 40px 0 20px 0;
+  background: var(--theme-box-background);
+  border-radius: 10px;
+}
+
+.skill {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.skillName {
+  font-weight: bold;
+  -webkit-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
+  opacity: 0;
+}
+
+.skill:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.skill:hover .skillName {
+  -webkit-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
+  opacity: 1;
+}
+
+.gridContainer {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  row-gap: 20px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.card {
+  margin: 0 auto;
+  width: 768px;
+  height: 432px;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card .cardImg {
+  z-index: 0;
+}
+
+.card .cardOverlay {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.card .cardOverlay span {
+  font-size: 1.3em;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.card :hover .cardOverlay {
+  opacity: 1;
+}
+
+.cardMini {
+  width: 368px;
+  height: 198px;
+}
+
+.workInfomation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  vertical-align: middle;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin: 0;
+}
+
+.workInfomation .subTitle {
+  width: 100%;
+  text-align: left;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--theme-highlight-color);
+  margin-bottom: 10px;
+}
+
+.workInfomation .infoContents {
+  text-align: left;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.workInfomation .infoContents li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 0 10px 0;
+  padding: 0px;
+}
+
+.workInfomation .infoContents .list {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.workInfomation .infoContents .content {
+  -webkit-box-flex: 9;
+      -ms-flex: 9;
+          flex: 9;
+}
+
+.btn {
+  font-size: 1.8rem;
+  color: #fff;
+  background: var(--theme-highlight-color);
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+/*# sourceMappingURL=Contents.module.css.map */

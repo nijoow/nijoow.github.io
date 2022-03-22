@@ -1,9 +1,14 @@
 .nav {
+  font-size: 1.8rem;
   width: 100%;
   position: fixed;
-  background-color: #191919;
+  background: var(--theme-nav-background);
   z-index: 100;
   color: #ddd;
+  -webkit-box-shadow: 2px 2px 5px rgba(50, 50, 50, 0.3);
+          box-shadow: 2px 2px 5px rgba(50, 50, 50, 0.3);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .nav .navBar {
@@ -47,34 +52,11 @@
 
 .nav .navBar a {
   font-weight: 800;
-  font-size: 18px;
   padding: 0;
 }
 
 .nav .navBar a span {
-  background: linear-gradient(45deg, #ddd, #999);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.nav .navBar .angledGradient {
-  background: #999;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-}
-
-.nav .navBar .angledGradient:hover {
-  background: #ddd;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-}
-
-.nav .navBar .active {
-  background: #a69dc9;
+  background: var(--theme-gradient-text);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -105,6 +87,48 @@
   padding: 0 20px;
 }
 
+.nav .navBar li .angledGradient {
+  background: var(--theme-gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav .navBar li .active {
+  background: var(--theme-gradient-active);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav .navBar li .underLine {
+  position: relative;
+}
+
+.nav .navBar li .underLine::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  bottom: -3px;
+  border-radius: 1px;
+  left: 0;
+  background: var(--theme-gradient-text);
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.nav .navBar li :hover .underLine::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
 .nav .navBar .darkModeBtnContainer {
   margin-left: 20px;
 }
@@ -118,20 +142,16 @@
           align-items: center;
   width: 30px;
   height: 30px;
-  background-color: #999;
+  background: var(--theme-highlight-color);
 }
 
 .nav .navBar .darkModeBtnContainer .darkModeIcon {
   margin: auto;
-  color: #191919;
+  color: var(--theme-nav-background);
   width: 100%;
   height: 100%;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
-}
-
-.nav .navBar .darkModeBtn:hover {
-  background-color: #ddd;
 }
 
 .nav .navBar .darkModeBtn:hover .darkModeIcon {

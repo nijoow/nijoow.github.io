@@ -1,15 +1,15 @@
-import styles from "../styles/Home.module.css";
-
-export default function Infomation({ Icon, list, contents }) {
+import styles from "../styles/Contents.module.css";
+import { BsFillForwardFill } from "react-icons/Bs";
+export default function Information({ Icon, list, contents, link = null }) {
   return (
     <div className={styles.infomation}>
       <div className={styles.subTitle}>
-        <Icon className={styles.icon} />
+        {Icon ? <Icon className={styles.icon} /> : ""}
         <span>{list}</span>
       </div>
       <div className={styles.infoContents}>
-        {list == "깃허브" ? (
-          <a href="https://github.com/nijoow" target="_blank">
+        {link ? (
+          <a href={link} target="_blank" rel="noopener noreferrer">
             {contents}
           </a>
         ) : (

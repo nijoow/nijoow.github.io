@@ -1,18 +1,33 @@
 import Seo from "../components/Seo";
-import styles from "../styles/Home.module.css";
-import Infomation from "../components/Information";
+import styles from "../styles/Contents.module.css";
+import Information from "../components/Information";
+import { useEffect, useState, useRef, useContext } from "react";
 import {
   BsPersonCircle,
   BsFillCalendarEventFill,
   BsGithub,
   BsFillEnvelopeFill,
   BsFillPencilFill,
+  BsLink45Deg,
 } from "react-icons/Bs";
 import { GiBasketballBall, GiMusicalNotes } from "react-icons/Gi";
-// import { useState } from "react";
-
+import { UserContext } from "../context/context";
 export default function Home() {
-  // const [isClicked, setIsClicked] = useState(false);
+  const [song, setSong] = useState({});
+  const { dispatch, prefix } = useContext(UserContext);
+
+  useEffect(async () => {
+    try {
+      const response = await fetch(`${prefix}/api/nowPlaying`);
+
+      setSong(await response.json());
+      dispatch({ type: "setSong", value: song });
+    } catch (e) {
+      console.log(e);
+    }
+  }, []);
+  const { albumImageUrl, artist, songUrl, title } = song;
+
   return (
     <div>
       <Seo title="Home" />
@@ -40,40 +55,59 @@ export default function Home() {
           </li>
           <li>
             부족한 부분이 있더라도 항상 배우고 습득하려는 태도를 가지려고
-            노력하는 중입니다.{" "}
+            노력하는 중입니다.
           </li>
         </ul>
       </section>
       <section>
         <div className={styles.title}>Infomation</div>
-        <Infomation Icon={BsPersonCircle} list="이름" contents=": 이우진" />
-        <Infomation
+        <Information Icon={BsPersonCircle} list="이름" contents=": 이우진" />
+        <Information
           Icon={BsFillCalendarEventFill}
           list="생년월일"
           contents=": 1996.11.27"
         />
-        <Infomation
+        <Information
           Icon={BsFillPencilFill}
           list="학력"
           contents=": 부산대학교 디자인학과 디자인앤테크놀로지전공"
         />
-        <Infomation
+        <Information
           Icon={BsFillEnvelopeFill}
           list="이메일"
           contents=": nijoow1127@gmail.com"
         />
-        <Infomation Icon={BsGithub} list="깃허브" contents=": @nijoow" />
+        <Information
+          Icon={BsGithub}
+          list="깃허브"
+          contents=": @nijoow"
+          link="https://github.com/nijoow"
+        />
+        <Information
+          Icon={BsLink45Deg}
+          list="프로필링크"
+          contents=": @nijoow"
+          link="https://prfl.link/@nijoow"
+        />
       </section>
       <section>
         <div className={styles.title}>Interest</div>
-        <div className={styles.interest}>
+        {/* <div className={styles.interest}>
           <GiMusicalNotes />
           음악, 힙합, <GiBasketballBall />
           농구
-        </div>
-        <div align="left">
-          <img src="https://spotify-github-profile.vercel.app/api/view?uid=31z26ebvmvfzme53xtmbpjfs4rau&cover_image=true&theme=default" />
-        </div>
+        </div> */}
+        <a href={songUrl} target="_blank" rel="noopener noreferrer">
+          <div className={styles.song}>
+            <div className={styles.songAlbumImage}>
+              <img src={albumImageUrl} width="130" height="130"></img>
+            </div>
+            <div className={styles.songInfo}>
+              <div className={styles.songTitle}>{title}</div>
+              <div className={styles.songArtist}>{artist}</div>
+            </div>
+          </div>
+        </a>
       </section>
     </div>
   );

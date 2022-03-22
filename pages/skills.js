@@ -1,55 +1,38 @@
 import Seo from "../components/Seo";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
+// import Image from "next/image";
+import { useContext } from "react";
+import { UserContext } from "../context/context";
+import styles from "../styles/Contents.module.css";
 
 export default function Skills() {
+  const { prefix } = useContext(UserContext);
   const skillsFront = [
-    { fileName: "html.svg", name: "HTML" },
-    { fileName: "css.svg", name: "CSS" },
-    { fileName: "javascript.svg", name: "JAVASCRIPT" },
-    { fileName: "typescript.svg", name: "TYPESCRIPT" },
-    { fileName: "react.svg", name: "REACT JS" },
-    { fileName: "bootstrap.svg", name: "BOOTSTRAP" },
-    { fileName: "sass.svg", name: "SASS" },
-    { fileName: "next.svg", name: "NEXT JS" },
+    { id: 1, fileName: "html.svg", name: "HTML" },
+    { id: 2, fileName: "css.svg", name: "CSS" },
+    { id: 3, fileName: "javascript.svg", name: "JAVASCRIPT" },
+    { id: 4, fileName: "typescript.svg", name: "TYPESCRIPT" },
+    { id: 5, fileName: "react.svg", name: "REACT JS" },
+    { id: 6, fileName: "bootstrap.svg", name: "BOOTSTRAP" },
+    { id: 7, fileName: "sass.svg", name: "SASS" },
+    { id: 8, fileName: "next.svg", name: "NEXT JS" },
   ];
   const skillsEtc = [
-    { fileName: "git.svg", name: "GIT" },
-    { fileName: "illustrator.svg", name: "ILLUSTRATOR" },
-    { fileName: "photoshop.svg", name: "PHOTOSHOP" },
-    { fileName: "premiere.png", name: "PREMIERE" },
-    { fileName: "aftereffect.png", name: "AFTER EFFECT" },
-    { fileName: "arduino.svg", name: "ARDUINO" },
+    { id: 1, fileName: "git.svg", name: "GIT" },
+    { id: 2, fileName: "illustrator.svg", name: "ILLUSTRATOR" },
+    { id: 3, fileName: "photoshop.svg", name: "PHOTOSHOP" },
+    { id: 4, fileName: "premiere.png", name: "PREMIERE" },
+    { id: 5, fileName: "aftereffect.png", name: "AFTER EFFECT" },
+    // /{ id: 6, fileName: "arduino.svg", name: "ARDUINO" },
   ];
   const Skill = ({ fileName, name }) => {
     return (
-      <div className="skill">
-        <Image src={"/images/" + fileName} width="60" height="60" />
-        <span className="skillName">{name}</span>
-        <style jsx>{`
-          .skill {
-            display: flex;
-            flex: 1;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-            transition: all 0.3s ease-out;
-            color: #ddd;
-          }
-          .skill:hover {
-            transform: scale(1.1);
-          }
-          .skillName {
-            transition: all 0.3s ease-out;
-
-            opacity: 0;
-          }
-          .skill:hover .skillName {
-            transition: all 0.3s ease-out;
-
-            opacity: 1;
-          }
-        `}</style>
+      <div className={styles.skill}>
+        <img
+          src={`${prefix}/images/skills/${fileName}`}
+          width="60"
+          height="60"
+        />
+        <span className={styles.skillName}>{name}</span>
       </div>
     );
   };
@@ -57,32 +40,31 @@ export default function Skills() {
     <>
       <Seo title="Skills" />
       <section>
-        <div className={styles.title}>Front-End</div>
-        <div className="imageContainer">
+        <div className={styles.title}>Front-End Skills</div>
+        <div className={styles.imageContainer}>
           {skillsFront.map((skill) => {
-            console.log(skill);
-            return <Skill name={skill.name} fileName={skill.fileName} />;
+            return (
+              <Skill
+                key={skill.name}
+                name={skill.name}
+                fileName={skill.fileName}
+              />
+            );
           })}
         </div>
-        <div className={styles.title}>Etc</div>
-        <div className="imageContainer">
+        <div className={styles.title}>Etc Skills</div>
+        <div className={styles.imageContainer}>
           {skillsEtc.map((skill) => {
-            return <Skill name={skill.name} fileName={skill.fileName} />;
+            return (
+              <Skill
+                key={skill.id}
+                name={skill.name}
+                fileName={skill.fileName}
+              />
+            );
           })}
         </div>
       </section>
-      <style jsx>{`
-        .imageContainer {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-evenly;
-          width: 100%;
-          align-items: center;
-          padding: 40px 0 20px 0;
-          background: rgba(255, 255, 255, 0.1);
-          border-radius: 10px;
-        }
-      `}</style>
     </>
   );
 }
