@@ -9,7 +9,7 @@ import {
   BsFillEnvelopeFill,
   BsFillPencilFill,
   BsLink45Deg,
-} from "react-icons/Bs";
+} from "react-icons/bs";
 //import { GiBasketballBall, GiMusicalNotes } from "react-icons/Gi";
 import { UserContext } from "../context/context";
 export default function Home() {
