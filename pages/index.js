@@ -1,7 +1,6 @@
 import Seo from "../components/Seo";
 import styles from "../styles/Contents.module.css";
 import Information from "../components/Information";
-import { useEffect, useState, useRef, useContext } from "react";
 import {
   BsPersonCircle,
   BsFillCalendarEventFill,
@@ -10,24 +9,13 @@ import {
   BsFillPencilFill,
   BsLink45Deg,
 } from "react-icons/bs";
-//import { GiBasketballBall, GiMusicalNotes } from "react-icons/Gi";
+import NowPlaying from "../components/NowPlaying";
+import { useContext } from "react";
 import { UserContext } from "../context/context";
+//import { GiBasketballBall, GiMusicalNotes } from "react-icons/Gi";
+
 export default function Home() {
-  const [song, setSong] = useState({});
-  const { dispatch, prefix } = useContext(UserContext);
-
-  useEffect(async () => {
-    try {
-      const response = await fetch(`${prefix}/api/nowPlaying`);
-
-      setSong(await response.json());
-      dispatch({ type: "setSong", value: song });
-    } catch (e) {
-      console.log(e);
-    }
-  }, []);
-  const { albumImageUrl, artist, songUrl, title } = song;
-
+  const { isMobile } = useContext(UserContext);
   return (
     <div>
       <Seo title="Home" />
@@ -91,23 +79,13 @@ export default function Home() {
         />
       </section>
       <section>
-        <div className={styles.title}>Interest</div>
+        <div className={styles.title}>Recently Played Music</div>
         {/* <div className={styles.interest}>
           <GiMusicalNotes />
           음악, 힙합, <GiBasketballBall />
           농구
         </div> */}
-        <a href={songUrl} target="_blank" rel="noopener noreferrer">
-          <div className={styles.song}>
-            <div className={styles.songAlbumImage}>
-              <img src={albumImageUrl} width="130" height="130"></img>
-            </div>
-            <div className={styles.songInfo}>
-              <div className={styles.songTitle}>{title}</div>
-              <div className={styles.songArtist}>{artist}</div>
-            </div>
-          </div>
-        </a>
+        {!isMobile && <NowPlaying />}
       </section>
     </div>
   );
