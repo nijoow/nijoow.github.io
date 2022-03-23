@@ -30,7 +30,17 @@ export default function Pnudt12() {
               웹사이트
             </li>
             <li>
-              - [사용 언어] <br /> HTML, CSS, Javascript
+              [주요 기능] <br />- 졸업전시회 소개 및 전시회 정보
+              <br />
+              - 컨셉 및 작품 설명
+              <br />
+              - 작품 시연 영상 링크
+              <br />
+              - 오프닝 영상 및 메이킹 영상
+              <br />
+            </li>
+            <li>
+              [기술 스택] <br />- HTML, CSS, Javascript
             </li>
           </ul>
         </div>

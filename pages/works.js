@@ -26,6 +26,13 @@ const works = [
     url: "https://prfl.link/",
     imgSrc: "prflLink.PNG",
   },
+  {
+    id: 4,
+    pageName: "portpolio",
+    name: "PORTPOLIO",
+    url: "https://nijoow.github.io/",
+    imgSrc: "portpolio.PNG",
+  },
 ];
 
 //
