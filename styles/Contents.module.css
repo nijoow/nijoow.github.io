@@ -122,6 +122,15 @@
   background-color: var(--theme-underline);
 }
 
+.interest {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .song {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -181,20 +190,12 @@
 }
 
 .imageContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(20%, auto))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(20%, auto));
+  gap: 20px;
   width: 100%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   padding: 40px 0 20px 0;
   background: var(--theme-box-background);
   border-radius: 10px;
@@ -241,25 +242,22 @@
   width: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  row-gap: 20px;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
+  -ms-grid-columns: (minmax(40%, auto))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(40%, auto));
+  gap: 20px;
 }
 
 .card {
   margin: 0 auto;
-  width: 768px;
-  height: 432px;
+  max-width: 768px;
+  width: 90vw;
+  height: calc(90 / 16 * 9vw);
+  max-height: 432px;
   position: relative;
   border-radius: 10px;
   overflow: hidden;
-}
-
-.card .cardImg {
-  z-index: 0;
+  -webkit-box-shadow: 2px 2px 5px rgba(50, 50, 50, 0.2);
+          box-shadow: 2px 2px 5px rgba(50, 50, 50, 0.2);
 }
 
 .card .cardOverlay {
@@ -354,5 +352,125 @@
   background: var(--theme-highlight-color);
   border-radius: 5px;
   padding: 10px 20px;
+}
+
+@media (max-width: 480px) {
+  .infomation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    vertical-align: top;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    width: 100%;
+    min-height: 30px;
+    margin: 0 0 10px 0;
+  }
+  .infomation .subTitle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    vertical-align: middle;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-flex: 3;
+        -ms-flex: 3;
+            flex: 3;
+    text-align: right;
+  }
+  .infomation .subTitle .icon {
+    margin-right: 5px;
+  }
+  .infomation .infoContents {
+    height: 100%;
+    font-size: 2rem;
+    -webkit-box-flex: 7;
+        -ms-flex: 7;
+            flex: 7;
+  }
+  .song {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #000;
+    width: 90vw;
+    border-radius: 15px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-shadow: 2px 2px 5px rgba(25, 25, 25, 0.9);
+            box-shadow: 2px 2px 5px rgba(25, 25, 25, 0.9);
+  }
+  .song .songAlbumImage {
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px;
+    width: 130px;
+    height: 130px;
+  }
+  .song .songInfo {
+    margin-right: 10px;
+    width: 60%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 10px;
+    text-align: center;
+  }
+  .song .songInfo .songTitle {
+    width: 100%;
+    font-size: 2rem;
+    color: #fff;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .song .songInfo .songArtist {
+    width: 100%;
+    font-size: 1.5rem;
+    color: #bbb;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .imageContainer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(40%, auto))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(40%, auto));
+    gap: 20px;
+    width: 100%;
+    padding: 40px 0 20px 0;
+    background: var(--theme-box-background);
+    border-radius: 10px;
+  }
+  .gridContainer {
+    -ms-grid-columns: (minmax(50%, auto))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(50%, auto));
+  }
+  .cardMini {
+    width: 90vw;
+    height: calc(90 / 16 * 9vw);
+  }
+}
+
+@media (max-width: 768px) {
+  .gridContainer {
+    -ms-grid-columns: (minmax(50%, auto))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(50%, auto));
+  }
+  .card .cardImg {
+    width: inherit;
+    height: inherit;
+  }
 }
 /*# sourceMappingURL=Contents.module.css.map */

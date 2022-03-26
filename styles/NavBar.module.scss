@@ -14,9 +14,9 @@
     position: relative;
     max-width: 768px;
     height: 50px;
+    padding: 0 10px;
     margin: 0 auto;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+
     .logo {
       display: flex;
       align-items: center;
@@ -41,7 +41,9 @@
         -webkit-text-fill-color: transparent;
       }
     }
-
+    .navToggleContainer {
+      display: none;
+    }
     ul {
       list-style: none;
       display: flex;
@@ -94,8 +96,8 @@
       .darkModeBtn {
         display: flex;
         align-items: center;
-        width: 30px;
-        height: 30px;
+        width: 32px;
+        height: 32px;
         background: var(--theme-highlight-color);
       }
       .darkModeIcon {
@@ -110,12 +112,143 @@
 
     .darkModeBtn:hover {
       .darkModeIcon {
-        transform: rotate(20deg);
+        transform: rotate(30deg);
         transition: all 0.2s;
       }
     }
   }
 }
-// background: linear-gradient(45deg, $purple, #999);
-//         -webkit-background-clip: text;
-//         -webkit-text-fill-color: transparent;
+@media (max-width: 480px) {
+  .nav {
+    width: 100%;
+    padding: 0;
+    .navBar {
+      display: flex;
+      padding: 0 5%;
+      justify-content: space-between;
+      position: relative;
+      width: 90%;
+      height: 80px;
+      margin: 0 auto;
+
+      a:hover .logoImg {
+        transform: none;
+      }
+      .navToggleContainer {
+        display: flex;
+        align-items: center;
+        vertical-align: middle;
+        .navToggle {
+          display: none;
+          + label {
+            display: block;
+            width: 2.8rem;
+            height: 2.8rem;
+            position: relative;
+          }
+          + label > span {
+            display: block;
+            width: 100%;
+            height: 0.5rem;
+            border-radius: 0.5rem;
+            background-color: var(--theme-highlight-color);
+            transition: all 0.35s;
+            position: absolute;
+          }
+          + label > span:nth-child(1) {
+            top: 0;
+          }
+          + label > span:nth-child(2) {
+            top: 50%;
+            transform: translateY(-50%);
+          }
+          + label > span:nth-child(3) {
+            bottom: 0;
+          }
+        }
+        .navToggle:checked + label > span:nth-child(1) {
+          top: 50%;
+          transform: translateY(-50%) rotate(225deg);
+        }
+        .navToggle:checked + label > span:nth-child(2) {
+          opacity: 0;
+        }
+        .navToggle:checked + label > span:nth-child(3) {
+          bottom: 50%;
+          transform: translateY(50%) rotate(-225deg);
+        }
+      }
+
+      .show {
+        transform: translateX(0);
+        opacity: 1;
+      }
+      ul {
+        position: absolute;
+        background-color: var(--theme-nav-background);
+        transform: translateX(100%);
+        transition: all 0.3s;
+
+        //opacity: 0;
+        display: flex;
+        right: 0;
+        top: 99%;
+        list-style: none;
+        flex-direction: row;
+        height: 80%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+        justify-content: space-evenly;
+        border-radius: 0 0 10px 10px;
+        li {
+          position: relative;
+          display: flex;
+          height: 100%;
+          align-items: center;
+          padding: 0;
+          .angledGradient {
+            background: var(--theme-gradient-text);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+          .active {
+            background: var(--theme-gradient-active);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+          .underLine {
+            position: relative;
+          }
+          .underLine::after {
+            content: "";
+            width: 100%;
+            height: 2px;
+            position: absolute;
+            bottom: -3px;
+            border-radius: 1px;
+            left: 0;
+            background: var(--theme-gradient-text);
+            transform: scaleX(0);
+            transform-origin: right;
+
+            transition: transform 0.3s ease-in-out;
+          }
+          :hover .underLine::after {
+            transform: scaleX(1);
+            transform-origin: left;
+          }
+        }
+      }
+
+      .darkModeBtnContainer {
+        .darkModeBtn {
+          width: 4rem;
+          height: 4rem;
+        }
+        margin-left: 0px;
+      }
+    }
+  }
+}

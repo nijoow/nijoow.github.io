@@ -28,10 +28,10 @@ const works = [
   },
   {
     id: 4,
-    pageName: "portpolio",
-    name: "PORTPOLIO",
+    pageName: "portfolio",
+    name: "portfolio",
     url: "https://nijoow.github.io/",
-    imgSrc: "portpolio.PNG",
+    imgSrc: "portfolio.PNG",
   },
 ];
 
@@ -56,9 +56,9 @@ export default function Works() {
               >
                 <img
                   src={`${prefix}/images/works/${work.imgSrc}`}
-                  width="368"
-                  height="198"
-                  className={styles.worksImg}
+                  width="384"
+                  height="216"
+                  className={styles.cardImg}
                 ></img>
                 {/* <Image
                   src={`${prefix}/images/works/${work.imgSrc}`}

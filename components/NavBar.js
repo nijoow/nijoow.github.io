@@ -5,9 +5,10 @@ import styles from "../styles/NavBar.module.css";
 import { MdDarkMode, MdWbSunny } from "react-icons/md";
 import { useContext } from "react";
 import { UserContext } from "../context/context";
+import NavToggle from "./NavToggle";
 export default function NavBar() {
   const router = useRouter();
-  const { currentTheme, dispatch } = useContext(UserContext);
+  const { currentTheme, dispatch, isNavShow } = useContext(UserContext);
 
   const toggleTheme = () => {
     dispatch({ type: "toggleTheme" });
@@ -26,11 +27,12 @@ export default function NavBar() {
                   stroke={currentTheme === "dark" ? "#fff" : "#443483"}
                 />
               </div>
-              <span>&apos;S PORTPOLIO</span>
+              <span>&apos;S Portfolio</span>
             </div>
           </a>
         </Link>
-        <ul>
+        <NavToggle />
+        <ul className={isNavShow ? styles.show : styles.noShow}>
           <li>
             <Link href="/">
               <a>
