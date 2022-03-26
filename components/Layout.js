@@ -15,7 +15,6 @@ export default function Layout({ children }) {
   return (
     <>
       <NavBar />
-
       <container className={`container ${currentTheme}`}>
         <div>
           <Canvas
@@ -43,8 +42,8 @@ export default function Layout({ children }) {
             {children}
           </motion.div>
         </AnimatePresence>
-        <Footer />
       </container>
+      <Footer />
     </>
   );
 }

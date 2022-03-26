@@ -10,7 +10,7 @@ export default function Nijoow() {
   const [isClicked, setIsClicked] = useState(false);
   const { nodes, materials } = useGLTF("/3D/nijoowPurple.glb");
   useFrame(() => {
-    !isClicked && (group.current.rotation.y += 0.005);
+    !isClicked && (group.current.rotation.y += 0.004);
   });
 
   return (

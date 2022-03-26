@@ -12,7 +12,7 @@ import {
 import NowPlaying from "../components/NowPlaying";
 import { useContext } from "react";
 import { UserContext } from "../context/context";
-//import { GiBasketballBall, GiMusicalNotes } from "react-icons/Gi";
+import { GiBasketballBall, GiMusicalNotes } from "react-icons/Gi";
 
 export default function Home() {
   const { isMobile } = useContext(UserContext);
@@ -44,6 +44,13 @@ export default function Home() {
           <li>
             부족한 부분이 있더라도 항상 배우고 습득하려는 태도를 가지려고
             노력하는 중입니다.
+          </li>
+          <li>
+            <div className={styles.interest}>
+              힙합
+              <GiMusicalNotes />과 농구
+              <GiBasketballBall />에 관심이 많습니다.
+            </div>
           </li>
         </ul>
       </section>
@@ -80,12 +87,8 @@ export default function Home() {
       </section>
       <section>
         <div className={styles.title}>Recently Played Music</div>
-        {/* <div className={styles.interest}>
-          <GiMusicalNotes />
-          음악, 힙합, <GiBasketballBall />
-          농구
-        </div> */}
-        {!isMobile && <NowPlaying />}
+
+        <NowPlaying />
       </section>
     </div>
   );
