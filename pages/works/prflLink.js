@@ -23,7 +23,12 @@ export default function Pnudt12() {
           <div className={styles.subTitle}>[Explanation]</div>
           <ul className={styles.infoContents}>
             <li>
-              [담당 업무] <br />- 테마 페이지 디자인 및 퍼블리싱, 로고 제작
+              프로필링크(prfl.link) <br /> - 여러 홈페이지 주소와 작업물 등을 한
+              눈에 볼 수 있는 멀티링크 연결 서비스
+            </li>
+            <li>
+              [담당 업무] <br />- 서비스 내 테마 페이지 디자인 및 퍼블리싱
+              <br /> - 프로필링크 로고 제작
             </li>
             <li>
               [기술 스택] <br />- CSS / React

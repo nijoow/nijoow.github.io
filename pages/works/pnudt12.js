@@ -32,15 +32,20 @@ export default function Pnudt12() {
             <li>
               [주요 기능] <br />- 졸업전시회 소개 및 전시회 정보
               <br />
-              - 컨셉 및 작품 설명
+              - 컨셉 및 작품 설명(전시회 도록 대체)
               <br />
-              - 작품 시연 영상 링크
-              <br />
-              - 오프닝 영상 및 메이킹 영상
+              - 전시회 작품 시연 영상 링크
               <br />
             </li>
             <li>
               [기술 스택] <br />- HTML, CSS, Javascript
+            </li>
+            <li>
+              [역할] <br />- 기획 및 디자인 참여
+              <br />- About 페이지, Header, 모바일 반응형 퍼블리싱
+              <br />
+              - 가로스크롤 페이지, 스크롤 타임라인 구현
+              <br />- 스크롤, mouse hover에 따른 모션 구현
             </li>
           </ul>
         </div>

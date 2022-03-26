@@ -18,7 +18,8 @@ export default function Pnudt12() {
         </div>
 
         <div className={styles.workInfomation}>
-          <div className={styles.subTitle}>[View]</div>
+          <div className={styles.subTitle}>[View] </div>
+
           <Work
             url="https://nijoow.github.io/CatchTheCandy_p5/"
             imgSrc="catchTheCandy.PNG"
@@ -43,9 +44,11 @@ export default function Pnudt12() {
             <li>
               [기술 스택] <br />- Javascript (p5.js)
             </li>
-
             <li>
-              [시연 영상] (Processing &amp; Arduino ver.)
+              [역할] <br />- 게임 기능 개발
+            </li>
+            <li>
+              [시연 영상] (졸업전시회 Processing &amp; Arduino ver.)
               <br />
             </li>
             <a
