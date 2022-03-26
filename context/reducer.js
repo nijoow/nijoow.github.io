@@ -1,6 +1,7 @@
 export const initialState = {
   currentTheme: "",
   recentlyPlayed: {},
+  isNavShow: false,
 };
 
 export const reducer = (state, action) => {
@@ -17,6 +18,11 @@ export const reducer = (state, action) => {
       return {
         ...state,
         recentlyPlayed: action.value,
+      };
+    case "toggleNav":
+      return {
+        ...state,
+        isNavShow: !state.isNavShow,
       };
     default:
       throw new Error();

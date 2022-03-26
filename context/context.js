@@ -1,11 +1,3 @@
-// import React from "react";
-
-// const PortfolioContext = React.createContext();
-
-// export const PortfolioProvider = PortfolioContext.Provider;
-// export const PortfolioConsumer = PortfolioContext.Consumer;
-// console.log(PortfolioContext);
-// export default PortfolioContext;
 import { prefix } from "../config/config";
 import { createContext, useReducer } from "react";
 import { reducer, initialState } from "./reducer";
@@ -17,10 +9,12 @@ export const UserContext = createContext();
 export const UserProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  const { currentTheme, recentlyPlayed } = state;
+  const { currentTheme, recentlyPlayed, isNavShow } = state;
   const systemPrefers = useMediaQuery({
     query: "(prefers-color-scheme: dark)",
   });
+  const isMobile = useMediaQuery({ maxDeviceWidth: 480 });
+
   useEffect(() => {
     const osTheme = systemPrefers ? "dark" : "light";
     const userTheme = localStorage.getItem("color-theme");
@@ -35,6 +29,7 @@ export const UserProvider = ({ children }) => {
         prefix,
         currentTheme,
         recentlyPlayed,
+        isNavShow,
       }}
     >
       {children}
