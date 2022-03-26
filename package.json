@@ -1,6 +1,6 @@
 {
   "homepage": "https://nijoow.github.io/",
-  "name": "nijoow-portpolio",
+  "name": "nijoow-portfolio",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -8,7 +8,7 @@
     "export": "next export",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "next build && next export && type nul > out/.nojekyll && git add out/ -f && git checkout -b temp-for-deploy-gh-pages && git commit -m \"Deploy Next.js to gh-pages\" && git subtree split --prefix out -b gh-pages && git push -f origin gh-pages:gh-pages && git branch -D gh-pages && git checkout main && git branch -D temp-for-deploy-gh-pages"
+    "deploy": "next build && next export && type nul > out/.nojekyll && git add out/ -f && git commit -m \"deploy to gh-pages\" && git subtree push --prefix out origin gh-pages"
   },
   "dependencies": {
     "@react-three/drei": "^8.6.3",
