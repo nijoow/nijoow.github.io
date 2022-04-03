@@ -8,7 +8,12 @@ export default function Information({ Icon, list, contents, link = null }) {
       </div>
       <div className={styles.infoContents}>
         {link ? (
-          <a href={link} target="_blank" rel="noopener noreferrer">
+          <a
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.linkText}
+          >
             {contents}
           </a>
         ) : (

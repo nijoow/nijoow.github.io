@@ -1,7 +1,3 @@
-// $purple-main: #2f274c;
-// $purple-sub: #4b4173;
-$purple: #8b7fb9;
-
 .introbox {
   display: flex;
   align-items: center;
@@ -18,7 +14,6 @@ $purple: #8b7fb9;
     font-size: 2rem;
     margin: 0 auto;
   }
-
   span {
     font-weight: bold;
     color: var(--theme-highlight-color);
@@ -77,9 +72,14 @@ $purple: #8b7fb9;
     }
   }
   .infoContents {
+    font-weight: bold;
     height: 100%;
     font-size: 2rem;
     flex: 8;
+    .linkText{
+      color:var(--theme-highlight-color);
+      
+    }
   }
 }
 .underLine {
@@ -246,23 +246,23 @@ $purple: #8b7fb9;
   }
   .infoContents {
     text-align: left;
+    list-style: none;
     width: 100%;
     padding: 0;
     margin: 0;
+
     li {
-      display: flex;
       margin: 0 0 10px 0;
       padding: 0px;
     }
-    .list {
-      flex: 1;
-    }
-    .content {
-      flex: 9;
-    }
   }
 }
+.bold {
+  font-weight: bold;
+}
 .btn {
+  display: flex;
+  align-items: center;
   font-size: 1.8rem;
   color: #fff; //var(--theme-default-text-color);
   background: var(--theme-highlight-color);

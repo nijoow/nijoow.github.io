@@ -66,6 +66,7 @@ section {
   transition: all 0.3s;
   color: var(--theme-default-text-color);
   font-size: 1.6rem;
+  line-height: 2.4rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -106,6 +107,7 @@ footer div {
   --theme-nav-background: rgba(192, 168, 235, 1);
   --theme-highlight-color: #8458b3;
   --theme-default-text-color: #111;
+  --theme-sub-text-color: #222;
   --theme-gradient-text: linear-gradient(45deg, #8458b3, #443483);
   --theme-gradient-active: #3c0779;
   --theme-underline: rgba(0, 0, 0, 0.5);

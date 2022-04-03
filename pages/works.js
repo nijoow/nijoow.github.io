@@ -7,17 +7,17 @@ import { UserContext } from "../context/context";
 const works = [
   {
     id: 1,
+    pageName: "portfolio",
+    name: "portfolio",
+    url: "https://nijoow.github.io/",
+    imgSrc: "portfolio.PNG",
+  },
+  {
+    id: 2,
     pageName: "pnudt12",
     name: "MEMORY",
     url: "https://nijoow.github.io/PNUDT12/",
     imgSrc: "pnudt12.png",
-  },
-  {
-    id: 2,
-    pageName: "catchTheCandy",
-    name: "CATCH THE CANDY",
-    url: "https://nijoow.github.io/CatchTheCandy_p5/",
-    imgSrc: "catchTheCandy.PNG",
   },
   {
     id: 3,
@@ -28,10 +28,10 @@ const works = [
   },
   {
     id: 4,
-    pageName: "portfolio",
-    name: "portfolio",
-    url: "https://nijoow.github.io/",
-    imgSrc: "portfolio.PNG",
+    pageName: "catchTheCandy",
+    name: "CATCH THE CANDY",
+    url: "https://nijoow.github.io/CatchTheCandy_p5/",
+    imgSrc: "catchTheCandy.PNG",
   },
 ];
 

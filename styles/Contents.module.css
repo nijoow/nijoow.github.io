@@ -100,11 +100,16 @@
 }
 
 .infomation .infoContents {
+  font-weight: bold;
   height: 100%;
   font-size: 2rem;
   -webkit-box-flex: 8;
       -ms-flex: 8;
           flex: 8;
+}
+
+.infomation .infoContents .linkText {
+  color: var(--theme-highlight-color);
 }
 
 .underLine {
@@ -321,32 +326,28 @@
 
 .workInfomation .infoContents {
   text-align: left;
+  list-style: none;
   width: 100%;
   padding: 0;
   margin: 0;
 }
 
 .workInfomation .infoContents li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   margin: 0 0 10px 0;
   padding: 0px;
 }
 
-.workInfomation .infoContents .list {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-.workInfomation .infoContents .content {
-  -webkit-box-flex: 9;
-      -ms-flex: 9;
-          flex: 9;
+.bold {
+  font-weight: bold;
 }
 
 .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 1.8rem;
   color: #fff;
   background: var(--theme-highlight-color);

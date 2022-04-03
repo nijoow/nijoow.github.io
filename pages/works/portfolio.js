@@ -2,6 +2,7 @@ import Seo from "../../components/Seo";
 import Link from "next/link";
 import styles from "../../styles/Contents.module.css";
 import Work from "../../components/Work";
+import { BsGithub } from "react-icons/bs";
 export default function portfolio() {
   return (
     <>
@@ -22,31 +23,42 @@ export default function portfolio() {
           <br />
           <div className={styles.subTitle}>[Explanation]</div>
           <ul className={styles.infoContents}>
-            <li>포트폴리오 사이트</li>
             <li>
-              [주요 기능] <br />
-              - 포트폴리오 소개 및 링크
+              <span className={styles.bold}> 개인 포트폴리오 사이트</span>
+              <br />- 저에 대한 소개와 경험했던 프로젝트를 모아놓은 포트폴리오
+              사이트입니다.
+              <br />- 다양한 기능을 추가해보며 업데이트하고 있습니다.
+            </li>
+            <li>
+              <span className={styles.bold}>[주요 기능]</span>
               <br />
-              - 다양한 transition을 추가한 CSS 마크업(SCSS)
+              Next.js 프레임워크를 사용한 Single Page Application
               <br />
-              - 다양한 transition을 추가한 CSS 마크업(SCSS)
+              - 다양한 동적 요소를 활용한 페이지 구현
+              <br />
+              - 반응형 CSS 마크업
               <br />
               - 시스템 테마에 따른 다크모드 및 토글 기능
               <br />
-              - blender와 three.js를 사용한 3D 로고 오브젝트 렌더링
-              <br />- Spotify API를 사용한 최근에 들은 음악 소개
+              - canvas와 three.js를 사용하여 blender로 제작한 3D 로고 오브젝트
+              렌더링
+              <br />- Spotify API를 사용하여 최근에 들은 음악 소개
             </li>
             <li>
-              [기술 스택]
+              <span className={styles.bold}>[기술 스택]</span>
               <br />- React / Next.js / SASS / three.js
             </li>
+            <li></li>
           </ul>
           <a
-            href="https://prfl.link/@nijoow"
+            href="https://github.com/nijoow/nijoow.github.io"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <button className={styles.btn}>My Page &gt;</button>
+            <button className={styles.btn}>
+              <BsGithub />
+              &nbsp; Github
+            </button>
           </a>
         </div>
       </section>

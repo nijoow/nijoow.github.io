@@ -2,6 +2,7 @@ import Seo from "../../components/Seo";
 import Link from "next/link";
 import styles from "../../styles/Contents.module.css";
 import Work from "../../components/Work";
+
 export default function Pnudt12() {
   return (
     <>
@@ -23,15 +24,20 @@ export default function Pnudt12() {
           <div className={styles.subTitle}>[Explanation]</div>
           <ul className={styles.infoContents}>
             <li>
-              프로필링크(prfl.link) <br /> - 여러 홈페이지 주소와 작업물 등을 한
-              눈에 볼 수 있는 멀티링크 연결 서비스
+              <span className={styles.bold}>프로필링크(prfl.link)</span>
+              <br /> - 여러 홈페이지 주소와 작업물 등을 한 눈에 볼 수 있는
+              멀티링크 연결 서비스
+              <br /> - 스타트업 기업에서의 현장실습 기간에 참여한 프로젝트
             </li>
             <li>
-              [담당 업무] <br />- 서비스 내 테마 페이지 디자인 및 퍼블리싱
-              <br /> - 프로필링크 로고 제작
+              <span className={styles.bold}> [담당 업무]</span>
+              <br />- 서비스 내 테마 페이지 디자인 <br />
+              - svg를 활용한 테마 페이지 퍼블리싱
+              <br />- 프로필링크 로고 제작
             </li>
             <li>
-              [기술 스택] <br />- CSS / React
+              <span className={styles.bold}> [기술 스택]</span> <br />- CSS /
+              React
             </li>
           </ul>
           <a
